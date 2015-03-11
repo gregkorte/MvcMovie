@@ -23,7 +23,8 @@ namespace MvcMovie.Migrations
                 ReleaseDate = DateTime.Parse("1995-01-01"),
                 Genre = "Action",
                 Price = 0,
-                Rating = "R"
+                Rating = "R",
+                Razzie = false
             },
 
          new Movie
@@ -32,7 +33,8 @@ namespace MvcMovie.Migrations
              ReleaseDate = DateTime.Parse("1977-01-01"),
              Genre = "SciFi",
              Price = 0,
-             Rating = "PG"
+             Rating = "PG",
+             Razzie = false
          },
 
          new Movie
@@ -41,7 +43,8 @@ namespace MvcMovie.Migrations
              ReleaseDate = DateTime.Parse("1980-01-01"),
              Genre = "SciFi",
              Price = 0,
-             Rating = "PG"
+             Rating = "PG",
+             Razzie = false
          },
 
        new Movie
@@ -50,7 +53,8 @@ namespace MvcMovie.Migrations
            ReleaseDate = DateTime.Parse("1983-01-01"),
            Genre = "SciFi",
            Price = 0,
-           Rating = "PG"
+           Rating = "PG",
+           Razzie = false
        }
             );
         }

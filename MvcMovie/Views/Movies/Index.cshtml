@@ -11,7 +11,7 @@
 
      @using (Html.BeginForm("Index","Movies",FormMethod.Get)){
         <p> 
-            Genre: @Html.DropDownList("movieGenre", "All") 
+            Genre: @Html.DropDownList("movieGenre", new SelectList(ViewBag.movieGenre)) 
             Title: @Html.TextBox("SearchString")
             <input type="submit" value="filter" />
         </p>
@@ -37,6 +37,12 @@
         <th>
             @Html.DisplayNameFor(model => model.Razzie)
         </th>
+        <th>
+            My Rating
+        </th>
+        <th>
+            Average Rating
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -57,8 +63,22 @@
             @Html.DisplayFor(modelItem => item.Rating)
         </td>
         <td>
-            <input type="checkbox" name="hasRazzie" value="@item.Razzie" />
+            @Html.CheckBoxFor(modelItem => item.Razzie)
         </td>
+        <td>
+            @using (Html.BeginForm("UpdateRating", "Movies", FormMethod.Post, new { id = "ratingform" }))
+            {
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <input type="submit" value="Rate Movie" />
+            }
+        </td>
+        <td>N/A</td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |

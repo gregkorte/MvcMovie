@@ -163,6 +163,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="Controllers\StarsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -182,11 +183,20 @@
     <Compile Include="Migrations\201503081902342_DataAnnotations.Designer.cs">
       <DependentUpon>201503081902342_DataAnnotations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503091550513_Stars.cs" />
+    <Compile Include="Migrations\201503091550513_Stars.Designer.cs">
+      <DependentUpon>201503091550513_Stars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503091840309_Razzie.cs" />
+    <Compile Include="Migrations\201503091840309_Razzie.Designer.cs">
+      <DependentUpon>201503091840309_Razzie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Star.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -203,6 +213,8 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -255,6 +267,11 @@
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Movies\Edit.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Stars\Create.cshtml" />
+    <Content Include="Views\Stars\Delete.cshtml" />
+    <Content Include="Views\Stars\Details.cshtml" />
+    <Content Include="Views\Stars\Edit.cshtml" />
+    <Content Include="Views\Stars\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -278,6 +295,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201503081902342_DataAnnotations.resx">
       <DependentUpon>201503081902342_DataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503091550513_Stars.resx">
+      <DependentUpon>201503091550513_Stars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503091840309_Razzie.resx">
+      <DependentUpon>201503091840309_Razzie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
